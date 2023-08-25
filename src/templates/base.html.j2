@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Litestar with users</title>
+    <script defer src="/src/static/htmx-json-enc.js"></script>
+    <script src="/src/static/htmx.1.9.4.js"></script>
+
+
+
+</head>
+
+<body>
+    This website has 3 pages:  <a href="/">Home</a> | <a href="/login">Login</a> |  <a href="/top-secret">Top Secret Stuff</a>
+    {% block content %}
+    {% endblock %}
+
+    <button hx-post="/api/logout" hx-target="body">Logout</button> 
+</body>
+
+</html>

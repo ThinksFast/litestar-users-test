@@ -1,0 +1,10 @@
+{% extends 'base.html.j2' %}
+{% block content %}
+<h1>Please log in<h1>
+
+<form>
+<input name="email" type="email" placeholder="email"/>
+<input name="password" type="password" placeholder="password"/>
+<button hx-post="/api/login" hx-target="body" hx-ext='json-enc'>Login</button>
+</form>
+{% endblock %}

@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "litestar-u-test"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+litestar = {extras = ["cryptography", "pydantic", "standard"], version = "^2.0.1"}
+litestar-users = {git = "https://github.com/LonelyVikingMichael/starlite-users.git", rev = "dto-overhaul"}
+aiosqlite = "^0.19.0"
+greenlet = "^2.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
